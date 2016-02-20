@@ -15,7 +15,11 @@ namespace SmartCar
         public Form1()
         {
             InitializeComponent();
-            //this.MonitorGroupBox.Controls.Add(new Monitor.Car());
+            Monitor.Car car = new Monitor.Car();
+            this.DisplayPanel.Controls.Add(car);
+            car.RealPosition = new PointF(3, 3);
+            car.Direction = Math.PI / 2;
+            car.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)

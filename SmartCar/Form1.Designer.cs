@@ -30,16 +30,18 @@
         {
             this.BackPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ParameterPanel = new System.Windows.Forms.Panel();
+            this.ControlGroupBox = new System.Windows.Forms.GroupBox();
+            this.SensorStatus = new System.Windows.Forms.GroupBox();
             this.StatusPanel = new System.Windows.Forms.Panel();
             this.LogGroupBox = new System.Windows.Forms.GroupBox();
             this.LogTextBox = new System.Windows.Forms.TextBox();
-            this.ControlGroupBox = new System.Windows.Forms.GroupBox();
-            this.SensorStatus = new System.Windows.Forms.GroupBox();
             this.MonitorGroupBox = new System.Windows.Forms.GroupBox();
+            this.DisplayPanel = new System.Windows.Forms.Panel();
             this.BackPanel.SuspendLayout();
             this.ParameterPanel.SuspendLayout();
             this.StatusPanel.SuspendLayout();
             this.LogGroupBox.SuspendLayout();
+            this.MonitorGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // BackPanel
@@ -73,6 +75,30 @@
             this.ParameterPanel.Size = new System.Drawing.Size(162, 512);
             this.ParameterPanel.TabIndex = 0;
             // 
+            // ControlGroupBox
+            // 
+            this.ControlGroupBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ControlGroupBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ControlGroupBox.Location = new System.Drawing.Point(0, 238);
+            this.ControlGroupBox.Margin = new System.Windows.Forms.Padding(0);
+            this.ControlGroupBox.Name = "ControlGroupBox";
+            this.ControlGroupBox.Size = new System.Drawing.Size(162, 274);
+            this.ControlGroupBox.TabIndex = 1;
+            this.ControlGroupBox.TabStop = false;
+            this.ControlGroupBox.Text = "控制器";
+            // 
+            // SensorStatus
+            // 
+            this.SensorStatus.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.SensorStatus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SensorStatus.Location = new System.Drawing.Point(0, 0);
+            this.SensorStatus.Margin = new System.Windows.Forms.Padding(0);
+            this.SensorStatus.Name = "SensorStatus";
+            this.SensorStatus.Size = new System.Drawing.Size(162, 235);
+            this.SensorStatus.TabIndex = 0;
+            this.SensorStatus.TabStop = false;
+            this.SensorStatus.Text = "传感器信息";
+            // 
             // StatusPanel
             // 
             this.StatusPanel.Controls.Add(this.LogGroupBox);
@@ -102,6 +128,7 @@
             // 
             this.LogTextBox.BackColor = System.Drawing.SystemColors.WindowText;
             this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTextBox.Enabled = false;
             this.LogTextBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LogTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.LogTextBox.Location = new System.Drawing.Point(0, 22);
@@ -112,32 +139,9 @@
             this.LogTextBox.Size = new System.Drawing.Size(497, 128);
             this.LogTextBox.TabIndex = 1;
             // 
-            // ControlGroupBox
-            // 
-            this.ControlGroupBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ControlGroupBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ControlGroupBox.Location = new System.Drawing.Point(0, 238);
-            this.ControlGroupBox.Margin = new System.Windows.Forms.Padding(0);
-            this.ControlGroupBox.Name = "ControlGroupBox";
-            this.ControlGroupBox.Size = new System.Drawing.Size(162, 274);
-            this.ControlGroupBox.TabIndex = 1;
-            this.ControlGroupBox.TabStop = false;
-            this.ControlGroupBox.Text = "控制器";
-            // 
-            // SensorStatus
-            // 
-            this.SensorStatus.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.SensorStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SensorStatus.Location = new System.Drawing.Point(0, 0);
-            this.SensorStatus.Margin = new System.Windows.Forms.Padding(0);
-            this.SensorStatus.Name = "SensorStatus";
-            this.SensorStatus.Size = new System.Drawing.Size(162, 235);
-            this.SensorStatus.TabIndex = 0;
-            this.SensorStatus.TabStop = false;
-            this.SensorStatus.Text = "传感器信息";
-            // 
             // MonitorGroupBox
             // 
+            this.MonitorGroupBox.Controls.Add(this.DisplayPanel);
             this.MonitorGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MonitorGroupBox.Location = new System.Drawing.Point(0, 0);
             this.MonitorGroupBox.Margin = new System.Windows.Forms.Padding(0);
@@ -146,6 +150,15 @@
             this.MonitorGroupBox.TabIndex = 2;
             this.MonitorGroupBox.TabStop = false;
             this.MonitorGroupBox.Text = "模拟器";
+            // 
+            // DisplayPanel
+            // 
+            this.DisplayPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DisplayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DisplayPanel.Location = new System.Drawing.Point(3, 17);
+            this.DisplayPanel.Name = "DisplayPanel";
+            this.DisplayPanel.Size = new System.Drawing.Size(497, 342);
+            this.DisplayPanel.TabIndex = 0;
             // 
             // Form1
             // 
@@ -161,6 +174,7 @@
             this.StatusPanel.ResumeLayout(false);
             this.LogGroupBox.ResumeLayout(false);
             this.LogGroupBox.PerformLayout();
+            this.MonitorGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +190,7 @@
         private System.Windows.Forms.GroupBox ControlGroupBox;
         private System.Windows.Forms.GroupBox SensorStatus;
         private System.Windows.Forms.GroupBox MonitorGroupBox;
+        private System.Windows.Forms.Panel DisplayPanel;
     }
 }
 
