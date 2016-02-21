@@ -7,3 +7,12 @@ D:\Programmer\C#\2016\SmartCar\SmartCar\obj\Debug\SmartCar.Properties.Resources.
 D:\Programmer\C#\2016\SmartCar\SmartCar\obj\Debug\SmartCar.csproj.GenerateResource.Cache
 D:\Programmer\C#\2016\SmartCar\SmartCar\obj\Debug\SmartCar.exe
 D:\Programmer\C#\2016\SmartCar\SmartCar\obj\Debug\SmartCar.pdb
+C:\Answer_Zero\git\SmartCar\SmartCar\bin\Debug\SmartCar.exe.config
+C:\Answer_Zero\git\SmartCar\SmartCar\obj\Debug\SmartCar.exe
+C:\Answer_Zero\git\SmartCar\SmartCar\obj\Debug\SmartCar.pdb
+C:\Answer_Zero\git\SmartCar\SmartCar\bin\Debug\SmartCar.exe
+C:\Answer_Zero\git\SmartCar\SmartCar\bin\Debug\SmartCar.pdb
+C:\Answer_Zero\git\SmartCar\SmartCar\obj\Debug\SmartCar.csprojResolveAssemblyReference.cache
+C:\Answer_Zero\git\SmartCar\SmartCar\obj\Debug\SmartCar.Form1.resources
+C:\Answer_Zero\git\SmartCar\SmartCar\obj\Debug\SmartCar.Properties.Resources.resources
+C:\Answer_Zero\git\SmartCar\SmartCar\obj\Debug\SmartCar.csproj.GenerateResource.Cache
