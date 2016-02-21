@@ -16,7 +16,7 @@ namespace SmartCar.Monitor
         public delegate void DirectionChangeHandler(double newDirection);
         public event DirectionChangeHandler DirectionChange;
 
-        public RealObject(SizeF realSize): base()
+        public RealObject(SizeF realSize): base()//构造函数
         {
             RealSize = realSize;
             RealPosition = new PointF(0, 0);
@@ -26,6 +26,9 @@ namespace SmartCar.Monitor
         public Image Image; //图像
         public static double RVscale = 10; //比例尺
 
+        /*
+         * 真实大小和虚拟大小之间的变换
+         */
         public SizeF RealSize { get; set; } //真实大小
         public Size VirtualSize //显示大小
         {
@@ -74,6 +77,10 @@ namespace SmartCar.Monitor
                 return (int)(Direction * 180 / Math.PI) % 360;
             }
         }
+
+        /*
+         * 车的各个重要位置的相对真实坐标和虚拟坐标
+         */
         public PointF RealHead //物体头部的真实坐标
         {
             get
@@ -115,6 +122,9 @@ namespace SmartCar.Monitor
         public Point VirtualLeft { get { return new Point((int)(RealLeft.X * RVscale), (int)(RealLeft.Y * RVscale)); } }
         public Point VirtualRight { get { return new Point((int)(RealRight.X * RVscale), (int)(RealRight.Y * RVscale)); } }
 
+        /*
+         * Onpaint函数
+         */
         protected override void OnPaint(PaintEventArgs pe)
         {
             this.Height = (int)(Math.Abs(VirtualSize.Height * Math.Cos(Direction)) + Math.Abs(VirtualSize.Width * Math.Sin(Direction)));

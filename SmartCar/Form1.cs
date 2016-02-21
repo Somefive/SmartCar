@@ -18,13 +18,9 @@ namespace SmartCar
             InitializeComponent();
             RealObject.RVscale = 20;
             Car car1 = new Monitor.Car();
-            Car car2 = new Monitor.Car();
             this.DisplayPanel.Controls.Add(car1);
-            this.DisplayPanel.Controls.Add(car2);
             car1.RealPosition = new PointF(3, 3);
-            car2.RealPosition = new PointF(6, 6);
             car1.Direction = Math.PI / 2;
-            
             car1.Focus();
         }
 
@@ -32,5 +28,6 @@ namespace SmartCar
         {
             
         }
+
     }
 }
