@@ -10,10 +10,12 @@ namespace SmartCar.Monitor
 {
     class Car: RealObject
     {
+        private Timer timer = new Timer();
+        private bool move = false;
+
         public Car() : base(new SizeF(1.7f, 3.6f))
         {
             this.Image = Properties.Resources.Car_00;
-            this.RVscale = 20;
         }
 
         public double RealSpeed; //真实车速
@@ -55,6 +57,27 @@ namespace SmartCar.Monitor
                 Forward(-1);
             base.OnKeyUp(e);
         }
-        
+
+        protected override void OnClick(EventArgs e)
+        {
+            if(!move)
+            {
+                move = true;
+                timer.Interval = 50;
+                timer.Tick += Timer_Tick;
+                timer.Start();
+            }
+            else
+            {
+                move = false;
+                timer.Stop();
+            }
+            base.OnClick(e);
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Forward(0.05);
+        }
     }
 }

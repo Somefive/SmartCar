@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SmartCar.Monitor;
 
 namespace SmartCar
 {
@@ -15,11 +16,16 @@ namespace SmartCar
         public Form1()
         {
             InitializeComponent();
-            Monitor.Car car = new Monitor.Car();
-            this.DisplayPanel.Controls.Add(car);
-            car.RealPosition = new PointF(3, 3);
-            car.Direction = Math.PI / 2;
-            car.Focus();
+            RealObject.RVscale = 20;
+            Car car1 = new Monitor.Car();
+            Car car2 = new Monitor.Car();
+            this.DisplayPanel.Controls.Add(car1);
+            this.DisplayPanel.Controls.Add(car2);
+            car1.RealPosition = new PointF(3, 3);
+            car2.RealPosition = new PointF(6, 6);
+            car1.Direction = Math.PI / 2;
+            
+            car1.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace SmartCar.Monitor
 {
@@ -23,7 +24,7 @@ namespace SmartCar.Monitor
             Size = new Size(10, 10);
         }
         public Image Image; //图像
-        public double RVscale = 10; //比例尺
+        public static double RVscale = 10; //比例尺
 
         public SizeF RealSize { get; set; } //真实大小
         public Size VirtualSize //显示大小
