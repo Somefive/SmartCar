@@ -56,7 +56,14 @@
     <Compile Include="Monitor\Car.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Monitor\Controler.cs" />
+    <Compile Include="Monitor\Obstacle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Monitor\RealObject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Monitor\View.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />

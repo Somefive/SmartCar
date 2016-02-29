@@ -125,19 +125,18 @@ namespace SmartCar.Monitor
         /*
          * Onpaint函数
          */
-        protected override void OnPaint(PaintEventArgs pe)
+        public void Draw(Graphics g)
         {
             this.Height = (int)(Math.Abs(VirtualSize.Height * Math.Cos(Direction)) + Math.Abs(VirtualSize.Width * Math.Sin(Direction)));
             this.Width = (int)(Math.Abs(VirtualSize.Height * Math.Sin(Direction)) + Math.Abs(VirtualSize.Width * Math.Cos(Direction)));
             this.Location = new Point(VirtualPosition.X - Width / 2, VirtualPosition.Y - Height / 2);
-            Graphics g = this.CreateGraphics();
+
             Point head = VirtualHead, position = VirtualPosition, tail = VirtualTail, left = VirtualLeft, right = VirtualRight;
-            Point leftup = new Point(left.X+head.X-position.X-Location.X,left.Y+head.Y-position.Y-Location.Y),
+            Point leftup = new Point(left.X + head.X - position.X - Location.X, left.Y + head.Y - position.Y - Location.Y),
                   rightup = new Point(right.X + head.X - position.X - Location.X, right.Y + head.Y - position.Y - Location.Y),
                   leftdown = new Point(left.X + tail.X - position.X - Location.X, left.Y + tail.Y - position.Y - Location.Y);
             Point[] imagearea = { leftup, rightup, leftdown };
             g.DrawImage(this.Image, imagearea);
-            base.OnPaint(pe);
         }
     }
 }

@@ -16,6 +16,7 @@ namespace SmartCar.Monitor
         private PointF realRotateC;//引入旋转中心
         private double radius = 500;//默认曲率半径
         private double velocity = 10;//默认车速
+
         public Car() : base(new SizeF(1.7f, 3.6f))
         {
             this.Image = Properties.Resources.Car_00;
@@ -123,4 +124,5 @@ namespace SmartCar.Monitor
             radius -= 1;
         }
     }
+    
 }
